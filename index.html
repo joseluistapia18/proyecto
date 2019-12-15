@@ -2,39 +2,50 @@
 <html>
     <head>
     	<link rel="stylesheet" type="text/css" href="tecnologia.css">
-         
+        <script>
+             function mostrarImagen(){
+               document.getElementById('cont2').innerHTML='<img src="https://elsalvador503briseyda13.files.wordpress.com/2014/06/378.jpg">';
+             }
+             function agregartxt1(){                
+             var text = document.createTextNode("La Web 3.0 es una web extendida, dotada de mayor significado donde cualquier usuario podra encontrar respuestas a sus preguntas de forma mas rapida."
+             	);                                    
+              document.getElementById("cont3").appendChild(text); 
+           } 
+
+ 
+        function lista(){
+        var car = document.getElementById("carac");
+        car.className = "list-group";
+        var listado = ['Inteligencia Artificial','Mineria de datos','Smartphones','Aplicaciones Moviles'];
+        listado.forEach(element => {
+          var li = document.createElement('li');
+          li.className ="list-group-item";
+          var liText = document.createTextNode(element);
+          li.appendChild(liText);
+          car.appendChild(li);
+        });
+        }
+         function ini(){
+           mostrarImagen();
+           agregartxt1();
+           lista();
+           }
+        </script>
         <title>Tema: Web 3.0</title>
-
     </head>
-    <body>
-        <div align="center">
-            <h1>Web 3.0</h1>
-
-            <img src="https://elsalvador503briseyda13.files.wordpress.com/2014/06/378.jpg" style="width: 20%;height: auto;" align="center" />
-
-
-            <p>
-                <textarea readonly name="comentarios" rows="3" cols="100" style="font-size:16px; font-type:Arial">
-La Web 3.0 es una web extendida, dotada de mayor significado donde cualquier usuario podra encontrar respuestas a sus preguntas de forma mas rapida. 
-                </textarea>
-            </p>
-            <h3>  Funciones y caracteristicas:</h3>
-            <textarea readonly  name="comentarios" rows="5" cols="25" style="font-size:16px; font-type:Arial">
-  Inteligencia Artificial
-  Mineria de datos
-  Smartphones
-  Aplicaciones Moviles
-            </textarea>
-
-
-            <p>El analisis de estas caracteristicas y funciones dan como resultado una mejor experiencia al usuario, al interactuar diariamente</p>
+    <body onload="ini()">
+<div id="cont2" align="center"></div>
+<div id="cont3"  align="center"></div>
+<div id="cont4"  align="center">
+	<h3>  Funciones y caracteristicas:</h3>
+<ul id="carac"></ul>
+<p>El analisis de estas caracteristicas y funciones dan como resultado una mejor experiencia al usuario, al interactuar diariamente</p>
 
             <h3>Impacto en estrategias de marketing</h3>
             <p>Se personaliza el producto a la medida del usuario, y conforme a su interaccion con las aplicaciones.</p>
             <p>Se da a conocer nuevos productos conforme a las historiales de busquedas</p>
             <a class="boton_personalizado" href="https://prezi.com/view/OBS6n4nWZ06RwJw8tSWn">Ver Presentacion</a>
+</div>
 
-
-        </div>
-    </body>
+ </body>
 </html>
